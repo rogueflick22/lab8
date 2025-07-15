@@ -183,13 +183,7 @@ footer {
 
     }
 
-    main {
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-            "nav"
-            "content";
-        padding: 1%;
-    }
+    
 
     nav ul li {
         display: block;
@@ -208,6 +202,14 @@ footer {
         font-family: Arial;
         font-weight: bold;
         
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "nav"
+            "content";
+        padding: 1%;
     }
 
     #heroimg {

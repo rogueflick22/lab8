@@ -1,0 +1,231 @@
+
+body, h1 {
+    margin: 0;
+    font-family: 'Sans-serif';
+}
+
+
+header{
+    background-image: url(/lab8/images/lighthouselogo.png);
+    background-position: left;
+    background-repeat: no-repeat;
+}   
+
+header, footer {
+    background-color: rgb(150, 166, 219);
+    color: #eee;
+    text-align: center;
+    padding: 10px;
+
+}
+
+h1 {
+    font-size: 7em;
+    font-weight: 500;
+    text-shadow: 5px 5px 15px black;
+    line-height: 135%;
+    
+}
+
+h1 a {
+    text-decoration: none;
+    color: #000;
+}
+
+h2 {
+    color: rgb(110, 127, 209);
+    font-family: 'Arial';
+    font-size: 1.5em;
+    margin-top: 20px;
+    
+}
+
+#wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    grid-template-areas: 
+        "content image";
+    gap: 20px;
+    padding: 20px;
+    
+}
+
+nav {
+    grid-area: nav;
+    background-color: rgb(212, 212, 245);
+    height: 100%; /* ✅ fills vertical space of the main container */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    text-align: left;
+    border-bottom: 1px solid white;
+}
+
+nav a {
+    color: white;
+    background-color: pink;
+    text-decoration: none;
+    display: block;
+    padding: 20px;
+}
+
+#heroimg {
+    grid-area: image;
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+}
+
+#wrapper {
+    grid-area: content;
+    padding: 0;
+    
+}
+
+footer {
+    padding: 10px;
+    font-size: smaller;
+}
+
+#copyright {
+    font-family: serif;
+    font-style: italic;
+    color: #000;
+}
+
+#navman {
+    display: grid;
+    grid-template-columns: 15fr 100fr 1fr;
+    grid-template-areas: "nav content image";
+}
+
+
+
+/* Tablet View */
+@media screen and (max-width: 1024px) {
+    h1 {
+        font-size: 5em;
+    }
+
+    main {
+    grid-template-columns: 1fr 100fr 40fr 1fr;
+    grid-template-areas: "nav content image";
+    padding: 20px;
+    }
+
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 5px;
+        margin: 0;
+        gap: 20px;
+    }
+
+    nav ul li {
+        border-bottom: none;
+    }
+
+    nav a {
+        padding: 15px;
+        background-color: pink;
+    }
+
+    #heroimg {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 400px;
+    margin-right: 20px; /* ✅ Add space from the screen edge */
+    }
+
+
+#wrapper {
+    padding: 0;
+    
+
+}
+#heroimg {
+    padding: 10px;
+}
+
+
+
+/* Mobile View */
+@media screen and (max-width: 760px) {
+    h1 {
+        font-size: 2.2em;
+        font-weight: bolder;
+        text-align: left;
+        padding: px;
+        text-shadow: none;
+        font-family: Arial;
+    }
+        
+    
+
+    h1 a {
+        color: rgb(29, 29, 143);
+
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "nav"
+            "content";
+        padding: 1%;
+    }
+
+    nav ul li {
+        display: block;
+        border-bottom: 1px solid rgb(255, 255, 255);
+        
+    }
+
+    nav ul {
+        display: block;
+        
+    }
+
+    nav a {
+        background-color: rgb(212, 212, 245);
+        padding: 10px;
+        font-family: Arial;
+        font-weight: bold;
+        
+    }
+
+    #heroimg {
+        display: none;
+    }
+
+    #wrapper {
+        padding: 1px;
+        margin: 1px;
+        margin-bottom: 20px;
+    }
+
+    header {
+        background-position: right;
+        background-size: 22%;
+    }
+
+    #wrapper > h2,
+    #wrapper > p {
+        margin: 5px 0px;
+    }
+}
